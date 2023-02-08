@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-
 const AccessAPI  = async () => {
     try {
       const response = await fetch(https://api.imgflip.com/get_memes);
