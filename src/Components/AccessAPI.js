@@ -27,7 +27,7 @@ const AccessAPI = () => {
       <img
         src={data.data.memes[0].url}
         alt="meme"
-        style={{ width: "75vw", height: "auto" }}
+        style={{ width: "50vw", height: "auto" }}
       />
     )
   );
