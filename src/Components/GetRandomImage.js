@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 
-const GetRandomImage = () => {
+const GetRandomImage = ({data}) => {
+    console.log(data.data.memes.length);
     
     return (
         <div>
-        GetRandomImage
+        <button>Randomise Meme Image</button>
         </div>
     )
 }
 
 export default GetRandomImage;
+
