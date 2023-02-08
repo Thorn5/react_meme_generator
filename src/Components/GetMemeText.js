@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from "react";
 
 const GetMemeText = () => {
-  return <h3>src/Components/GetMemeText.js</h3>;
+  const [memeTopText, setMemeTopText] = useState("")
+  return(
+    <div>
+      <b>Please type the top and bottom text:</b>
+
+    </div>
+  )
 };
 
 export default GetMemeText;

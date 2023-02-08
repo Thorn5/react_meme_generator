@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const AccessAPI = () => {
-  const [data, setData] = useState(null);
+  
 
   useEffect(() => {
     const getData = async () => {
@@ -9,7 +9,8 @@ const AccessAPI = () => {
         const response = await fetch("https://api.imgflip.com/get_memes");
         if (response.ok) {
           const data = await response.json();
-          console.log(data.data.memes[0]);
+          console.log(data);
+          // console.log(data.data.memes[0]);
           setData(data);
         } else {
           console.log(`Error: ${response.status}`);
@@ -27,7 +28,7 @@ const AccessAPI = () => {
       <img
         src={data.data.memes[0].url}
         alt="meme"
-        style={{ width: "50vw", height: "auto", border: "3px solid black" }}
+        style={{ width: "25vw", height: "auto", border: "3px solid black" }}
       />
     )
   );
