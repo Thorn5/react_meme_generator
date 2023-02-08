@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const [url, setUrl] = useState(https://api.imgflip.com/get_memes)
 
-export default const AccessAPI  = async (url) => {
+const AccessAPI  = async (url) => {
     try {
       const response = await fetch(url);
       if (response.ok) {
@@ -16,3 +16,5 @@ export default const AccessAPI  = async (url) => {
       console.log(`Error: ${error}`);
     }
   };
+  
+  export default AccessAPI;
