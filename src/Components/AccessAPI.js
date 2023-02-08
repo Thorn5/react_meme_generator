@@ -9,7 +9,7 @@ const AccessAPI = () => {
         const response = await fetch("https://api.imgflip.com/get_memes");
         if (response.ok) {
           const data = await response.json();
-          console.log(data);
+          console.log(data.data.memes[0]);
           setData(data);
         } else {
           console.log(`Error: ${response.status}`);
