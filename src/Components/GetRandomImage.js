@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 
 const GetRandomImage = ({data}) => {
-    console.log(data.data.memes.length);
+    console.log(data);
+    // console.log(data.data.memes.length);
     
     return (
         <div>
