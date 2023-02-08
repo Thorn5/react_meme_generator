@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const AccessAPI = () => {
-  
-
+const AccessAPI = ({ data, setData }) => {
   useEffect(() => {
     const getData = async () => {
       try {
