@@ -22,7 +22,15 @@ const AccessAPI = () => {
     getData();
   }, []);
 
-  return data;
+  return (
+    data && (
+      <img
+        src={data.data.memes[0].url}
+        alt="meme"
+        style={{ width: "75vw", height: "auto" }}
+      />
+    )
+  );
 };
 
 export default AccessAPI;
