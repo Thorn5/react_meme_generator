@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 
-const [url, setUrl] = useState(https://api.imgflip.com/get_memes)
-
-const AccessAPI  = async (url) => {
+const AccessAPI  = async () => {
     try {
-      const response = await fetch(url);
+      const response = await fetch(https://api.imgflip.com/get_memes);
       if (response.ok) {
         const data = await response.json();
         console.log(data);
