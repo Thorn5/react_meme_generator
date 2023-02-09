@@ -20,15 +20,6 @@ const AccessAPI = ({ apiData, setApiData, memeCurrentVal, setMemeMaxVal }) => {
     getApiData();
   }, []);
 
-  // return (
-  //   apiData && (
-  //     <img
-  //       src={apiData.data.memes[memeCurrentVal].url}
-  //       alt="meme"
-  //       style={{ width: "25vw", height: "auto", border: "3px solid black" }}
-  //     />
-  //   )
-  // );
 };
 
 export default AccessAPI;
