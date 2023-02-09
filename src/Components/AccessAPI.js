@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 const AccessAPI = ({ apiData, setApiData, memeCurrentVal, setMemeMaxVal }) => {
   useEffect(() => {
@@ -16,7 +16,6 @@ const AccessAPI = ({ apiData, setApiData, memeCurrentVal, setMemeMaxVal }) => {
         console.log(`Error: ${error}`);
       }
     };
-
     getApiData();
   }, []);
 
