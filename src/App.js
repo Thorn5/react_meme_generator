@@ -1,8 +1,8 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
 import AccessAPI from "./Components/AccessAPI";
-import GetMemeText from "./Components/GetMemeText";
-import SelectImage from "./Components/GetRandomImage";
+import SetMemeText from "./Components/SetMemeText";
+import SelectImage from "./Components/SelectImage";
 
 function App() {
   const [data, setData] = useState(null);
@@ -14,7 +14,7 @@ function App() {
       <h3><a href="https://platform.wbscodingschool.com/courses/full-stack-web-app/12948/">Trygve's React Meme Generator</a></h3>
       <SelectImage data={data} memeCurrentVal={memeCurrentVal} setMemeCurrentVal={setMemeCurrentVal} memeMaxVal={memeMaxVal} /> <br />
       <AccessAPI data={data} setData={setData} memeCurrentVal={memeCurrentVal} setMemeMaxVal={setMemeMaxVal} />
-      <GetMemeText />
+      <SetMemeText />
     </div>
   );
 }
