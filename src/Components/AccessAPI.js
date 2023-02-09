@@ -1,14 +1,14 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
-const AccessAPI = ({ data, setData, memeCurrentVal, setMemeMaxVal }) => {
+const AccessAPI = ({ apiData, setApiData, memeCurrentVal, setMemeMaxVal }) => {
   useEffect(() => {
-    const getData = async () => {
+    const getApiData = async () => {
       try {
         const response = await fetch("https://api.imgflip.com/get_memes");
         if (response.ok) {
-          const data = await response.json();
-          setData(data);
-          setMemeMaxVal(data.data.memes.length)
+          const apiData = await response.json();
+          setApiData(apiData);
+          setMemeMaxVal(apiData.data.memes.length)
         } else {
           console.log(`Error: ${response.status}`);
         }
@@ -16,19 +16,9 @@ const AccessAPI = ({ data, setData, memeCurrentVal, setMemeMaxVal }) => {
         console.log(`Error: ${error}`);
       }
     };
-
-    getData();
+    getApiData();
   }, []);
 
-  return (
-    data && (
-      <img
-        src={data.data.memes[memeCurrentVal].url}
-        alt="meme"
-        style={{ width: "25vw", height: "auto", border: "3px solid black" }}
-      />
-    )
-  );
 };
 
 export default AccessAPI;
