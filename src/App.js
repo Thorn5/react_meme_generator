@@ -9,8 +9,8 @@ function App() {
   const [apiData, setApiData] = useState(null);
   const [memeCurrentVal, setMemeCurrentVal] = useState(0);
   const [memeMaxVal, setMemeMaxVal] = useState(null);
-  const [topMemeText, setTopMemeText] = useState("Top Text");
-  const [bottomMemeText, setBottomMemeText] = useState("Bottom Text");
+  const [topMemeText, setTopMemeText] = useState("");
+  const [bottomMemeText, setBottomMemeText] = useState("");
 
   return (
     <div className="App">
@@ -23,7 +23,7 @@ function App() {
         memeCurrentVal={memeCurrentVal}
         setMemeCurrentVal={setMemeCurrentVal}
         memeMaxVal={memeMaxVal}
-      />{" "}
+      />
       <br />
       <AccessAPI
         apiData={apiData}

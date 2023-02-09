@@ -8,8 +8,8 @@ const SetMemeText = ({
   setBottomMemeText,
 }) => {
   const ResetText = () => {
-    setTopMemeText("Top Text");
-    setBottomMemeText("Bottom Text");
+    setTopMemeText("");
+    setBottomMemeText("");
   };
 
   return (
@@ -21,7 +21,8 @@ const SetMemeText = ({
           <input
             type="text"
             name="topText"
-            placeholder={topMemeText}
+            value={topMemeText}
+            placeholder="Top Text"
             onChange={(e) => setTopMemeText(e.target.value)}
           />
         </label>
@@ -31,7 +32,8 @@ const SetMemeText = ({
           <input
             type="text"
             name="bottomText"
-            placeholder={bottomMemeText}
+            value={bottomMemeText}
+            placeholder="Bottom Text"
             onChange={(e) => setBottomMemeText(e.target.value)}
           />
         </label>
